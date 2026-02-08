@@ -1,0 +1,566 @@
+<html>
+    <head>
+        <title>Order Online | Butter & Bloom</title>
+        <link rel="stylesheet" href="includes/styles.css">
+    </head>
+
+    <body>
+        <header class="site-header">
+            <h1>Butter <br>& Bloom</h1>
+            <nav class="nav-bar">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="order.html" target="_blank">Order Online</a>
+            </nav>
+        </header>
+
+        <main class="order-page">
+            <h1>Order Online</h1>
+            <p>Pick Up In Store</p>
+
+            <div class="order-list">
+                <div class="order-box">
+                    <img src="includes/images/funfettiCake.jpg" alt="Signature Cake">
+                    <div class="order-text">
+                        <h2>Signature Cakes</h2>
+                        <p>Our most popular cakes. Perfect for birthdays and celebrations. </p>
+                        <p class="price"> $40.00</p>
+                    </div>
+
+                    <div class="order-popup">
+                        <label for="popup-signature" class="order-button">Click Here to Order</label>
+                    </div>
+                </div>
+
+                <div class="order-box">
+                    <img src="includes/images/valentinesHeartCake.jpg" alt="Seasonal Cake">
+                    <div class="order-text">
+                        <h2>Seasonal Cakes</h2>
+                        <p>Limited-time cakes for Valentine's Day.</p>
+                        <p class="price"> Starting at $35.00</p>
+                    </div>
+                    <div class="order-popup">
+                        <label for="popup-seasonal" class="order-button">Click Here to Order</label>
+                    </div>
+                </div>
+
+                <div class="order-box">
+                    <img src="includes/images/singleCake.jpg" alt="Custom Single">
+                    <div class="order-text">
+                        <h2>Custom Single Tier Cake</h2>
+                        <p>Design a cake tailored to your event, style, and flavor preferences.</p>
+                        <p class="price"> $50.00</p>
+                    </div>
+
+                    <div class="order-popup">
+                        <label for="popup-custom-single" class="order-button">Click Here to Order</label>
+                    </div>
+                </div>
+
+                <div class="order-box">
+                    <img src="includes/images/2TierCake.jpg" alt="Custom 2Tier">
+                    <div class="order-text">
+                        <h2>Custom 2 Tiered Cake</h2>
+                        <p>Design a 2 tiered cake tailored to your event, style, and flavor preferences.</p>
+                        <p class="price"> $100.00</p>
+                    </div>
+
+                    <div class="order-popup">
+                        <label for="popup-custom-2Tier" class="order-button">Click Here to Order</label>
+                    </div>
+                </div>
+
+                <div class="order-box">
+                    <img src="includes/images/vintageCake.jpg" alt="Custom Vintage">
+                    <div class="order-text">
+                        <h2>Custom Vintage Cake</h2>
+                        <p>Design a vintage cake tailored to your style and flavor preferences.</p>
+                        <p class="price"> $65.00</p>
+                    </div>
+
+                    <div class="order-popup">
+                        <label for="popup-custom-vintage" class="order-button">Click Here to Order</label>
+                    </div>
+                </div>
+            </div>
+
+            <input type="checkbox" id="popup-signature" hidden>
+            <div class="popup">
+                <div class="signature-popup-content">
+                    <label for="popup-signature" class="close">x</label>
+
+                    <h2>Signature Cakes</h2> <br>
+                    <p>Our most popular cakes. Perfect for birthdays and celebrations. <br> Layered cake 
+                        frosted with buttercream frosting.</p><br>
+                        <p><b>Serving Guide: </b> <br> 2 layers of cake, serves 10-15.</p>
+                    <p class="price">$40.00</p>
+
+                    <label>
+                        <b>Quantiy:</b>
+                        <input type="number" min="1" value="1">
+                    </label> <br> <br>
+
+                    <div class="flavors">
+                        <p>Cake Flavor:</p>
+                        <div class="options-container">
+                            <input type="radio" name="flavor" id="Vanilla1" hidden>
+                            <label for="Vanilla1" class="option-button">Vanilla</label>
+
+                            <input type="radio" name="flavor" id="Chocolate1" hidden>
+                            <label for="Chocolate1" class="option-button">Chocolate</label>
+
+                            <input type="radio" name="flavor" id="Red Velvet1" hidden>
+                            <label for="Red Velvet1" class="option-button">Red Velvet</label>
+
+                            <input type="radio" name="flavor" id="Carrot1" hidden>
+                            <label for="Carrot1" class="option-button">Carrot</label>
+
+                            <input type="radio" name="flavor" id="Lemon1" hidden>
+                            <label for="Lemon1" class="option-button">Lemon</label>
+
+                            <input type="radio" name="flavor" id="Coconut1" hidden>
+                            <label for="Coconut1" class="option-button">Coconut</label>
+                        </div>
+                    </div>
+                    <label for="popup-signature" class="add-button">Add to Order</label>
+                </div>
+            </div>
+
+            <input type="checkbox" id="popup-seasonal" hidden>
+            <div class="popup">
+                <div class="Seasonal-popup-content">
+                    <label for="popup-seasonal" class="close">x</label>
+
+                    <h2>Seasonal Cakes</h2> <br>
+                    <p>Limited-time cakes for Valentine's Day.</p>
+
+                    <label>
+                        <b>Quantiy: </b>
+                        <input type="number" min="1" value="1">
+                    </label> <br> <br>
+
+                    <div class="options-container">
+                        <input type="radio" name="flavor" id="Valentine's Day Heart Cake" hidden>
+                        <label for="Valentine's Day Heart Cake" class="seasonal-option-button">Valentine's Day Heart Cake - $65.00</label>
+
+                        <input type="radio" name="flavor" id="Heart Mousse Cake" hidden>
+                        <label for="Heart Mousse Cake" class="seasonal-option-button">Heart Mousse Cake - $35.00</label>
+
+                        <input type="radio" name="flavor" id="floral cake" hidden>
+                        <label for="floral cake" class="seasonal-option-button">2 Tiered Floral Vanilla Cake - $100.00</label>
+                    </div>
+
+                    <label for="popup-seasonal" class="add-button">Add to Order</label>
+                </div>
+            </div>
+
+            <input type="checkbox" id="popup-custom-single" hidden>
+            <div class="popup">
+                <div class="custom-single-popup-content">
+                    <label for="popup-custom-single" class="close">x</label>
+
+                    <h2>Custom Single Tier Cake</h2><br>
+                    <p>Design a single tier round cake tailored to your event, style, and flavor preferences. <br> Layered cake 
+                    frosted with buttercream frosting.</p><br>
+                    <p><b>Serving Guide: </b> <br> 2 layers of cake, serves 10-15.</p>
+                    <p class="price">$50.00</p>
+
+                    <label>
+                       <b>Quantiy:</b>
+                        <input type="number" min="1" value="1">
+                    </label> <br> <br>
+
+                    <div class="flavors">
+                        <p>Cake Flavor:</p>
+                        <div class="options-container">
+                            <input type="radio" name="flavor" id="Vanilla" hidden>
+                            <label for="Vanilla" class="option-button">Vanilla</label>
+
+                            <input type="radio" name="flavor" id="Chocolate" hidden>
+                            <label for="Chocolate" class="option-button">Chocolate</label>
+
+                            <input type="radio" name="flavor" id="Red Velvet" hidden>
+                            <label for="Red Velvet" class="option-button">Red Velvet</label>
+
+                            <input type="radio" name="flavor" id="Carrot" hidden>
+                            <label for="Carrot" class="option-button">Carrot</label>
+
+                            <input type="radio" name="flavor" id="Lemon" hidden>
+                            <label for="Lemon" class="option-button">Lemon</label>
+
+                            <input type="radio" name="flavor" id="Coconut" hidden>
+                            <label for="Coconut" class="option-button">Coconut</label>
+                        </div>
+                    </div>
+
+
+                    <div class="colors">
+                        <p>Cake Frosting Color:</p>
+                        <div class="options-container">
+                            <input type="radio" name="color" id="Pink" hidden>
+                            <label for="Pink" class="option-button">Pink</label>
+
+                            <input type="radio" name="color" id="Red" hidden>
+                            <label for="Red" class="option-button">Red</label>
+
+                            <input type="radio" name="color" id="Orange" hidden>
+                            <label for="Orange" class="option-button">Orange</label>
+
+                            <input type="radio" name="color" id="Yellow" hidden>
+                            <label for="Yellow" class="option-button">Yellow</label>
+
+                            <input type="radio" name="color" id="Green" hidden>
+                            <label for="Green" class="option-button">Green</label>
+
+                            <input type="radio" name="color" id="Blue" hidden>
+                            <label for="Blue" class="option-button">Blue</label>
+
+                            <input type="radio" name="color" id="Purple" hidden>
+                            <label for="Purple" class="option-button">Purple</label>
+
+                            <input type="radio" name="color" id="Natural" hidden>
+                            <label for="Natural" class="option-button">Natural (while/cream)</label>
+                        </div>
+                    </div>
+
+                    <div class="piping-colors">
+                        <p>Message Color:</p>
+                        <div class="options-container">
+                            <input type="radio" name="piping-colors" id="PinkPiping" hidden>
+                            <label for="PinkPiping" class="option-button">Pink</label>
+
+                            <input type="radio" name="piping-colors" id="RedPiping" hidden>
+                            <label for="RedPiping" class="option-button">Red</label>
+
+                            <input type="radio" name="piping-colors" id="OrangePiping" hidden>
+                            <label for="OrangePiping" class="option-button">Orange</label>
+
+                            <input type="radio" name="piping-colors" id="YellowPiping" hidden>
+                            <label for="YellowPiping" class="option-button">Yellow</label>
+
+                            <input type="radio" name="piping-colors" id="GreenPiping" hidden>
+                            <label for="GreenPiping" class="option-button">Green</label>
+
+                            <input type="radio" name="piping-colors" id="BluePiping" hidden>
+                            <label for="BluePiping" class="option-button">Blue</label>
+
+                            <input type="radio" name="piping-colors" id="PurplePiping" hidden>
+                            <label for="PurplePiping" class="option-button">Purple</label>
+
+                            <input type="radio" name="piping-colors" id="NaturalPiping" hidden>
+                            <label for="NaturalPiping" class="option-button">Natural (while/cream)</label>
+                        </div>
+                    </div>
+
+                    <div class="custom-message">
+                        <label for="message"><b>Message on Cake</b> (max of 18 characters)</label> <br>
+                        <textarea id="message" name="message" placeholder="Write your message here..." rows="2" maxlength="18"></textarea>
+                    </div>
+
+                    <label for="popup-custom-single" class="add-button">Add to Order</label>
+                </div>
+            </div>
+
+            <input type="checkbox" id="popup-custom-2Tier" hidden>
+            <div class="popup">
+                <div class="custom-2Tier-popup-content">
+                    <label for="popup-custom-2Tier" class="close">x</label>
+
+                    <h2>Custom 2 Tier Cake</h2><br>
+                    <p>Design a 2 tiered cake tailored to your event, style, and flavor preferences. <br> Layered cake 
+                    frosted with buttercream frosting.</p><br>
+                    <p><b>Serving Guide: </b> <br> Bottom tier has 3 layers of cake and top 2 has 2 layers of cake, serves 50+.</p>
+
+                    <p class="price">$100.00</p>
+
+                    <label>
+                       <b>Quantiy:</b>
+                        <input type="number" min="1" value="1">
+                    </label> <br> <br>
+
+                    <div class="flavors">
+                        <p>Bottom Tier Cake Flavor:</p>
+                        <div class="options-container">
+                            <input type="radio" name="flavor" id="Vanilla2Tier" hidden>
+                            <label for="Vanilla2Tier" class="option-button">Vanilla</label>
+
+                            <input type="radio" name="flavor" id="Chocolate2Tier" hidden>
+                            <label for="Chocolate2Tier" class="option-button">Chocolate</label>
+
+                            <input type="radio" name="flavor" id="Red Velvet2Tier" hidden>
+                            <label for="Red Velvet2Tier" class="option-button">Red Velvet</label>
+
+                            <input type="radio" name="flavor" id="Carrot2Tier" hidden>
+                            <label for="Carrot2Tier" class="option-button">Carrot</label>
+
+                            <input type="radio" name="flavor" id="Lemon2Tier" hidden>
+                            <label for="Lemon2Tier" class="option-button">Lemon</label>
+
+                            <input type="radio" name="flavor" id="Coconut2Tier" hidden>
+                            <label for="Coconut2Tier" class="option-button">Coconut</label>
+                        </div>
+                    </div> <br> <br>
+
+                    <div class="flavors">
+                        <p>Top Tier Cake Flavor:</p>
+                        <div class="options-container">
+                            <input type="radio" name="flavor" id="Vanilla2Tier2" hidden>
+                            <label for="Vanilla2Tier2" class="option-button">Vanilla</label>
+
+                            <input type="radio" name="flavor" id="Chocolate2Tier2" hidden>
+                            <label for="Chocolate2Tier2" class="option-button">Chocolate</label>
+
+                            <input type="radio" name="flavor" id="Red Velvet2Tier2" hidden>
+                            <label for="Red Velvet2Tier" class="option-button">Red Velvet</label>
+
+                            <input type="radio" name="flavor" id="Carrot2Tier" hidden>
+                            <label for="Carrot2Tier2" class="option-button">Carrot</label>
+
+                            <input type="radio" name="flavor" id="Lemon2Tier" hidden>
+                            <label for="Lemon2Tier2" class="option-button">Lemon</label>
+
+                            <input type="radio" name="flavor" id="Coconut2Tier" hidden>
+                            <label for="Coconut2Tier2" class="option-button">Coconut</label>
+                        </div>
+                    </div>
+
+
+                    <div class="colors">
+                        <p>Bottom Tier Frosting Color:</p>
+                        <div class="options-container">
+                            <input type="radio" name="color" id="Pink2Tier" hidden>
+                            <label for="Pink2Tier" class="option-button">Pink</label>
+
+                            <input type="radio" name="color" id="Red2Tier" hidden>
+                            <label for="Red2Tier" class="option-button">Red</label>
+
+                            <input type="radio" name="color" id="Orange2Tier" hidden>
+                            <label for="Orange2Tier" class="option-button">Orange</label>
+
+                            <input type="radio" name="color" id="Yellow2Tier" hidden>
+                            <label for="Yellow2Tier" class="option-button">Yellow</label>
+
+                            <input type="radio" name="color" id="Green2Tier" hidden>
+                            <label for="Green2Tier" class="option-button">Green</label>
+
+                            <input type="radio" name="color" id="Blue2Tier" hidden>
+                            <label for="Blue2Tier" class="option-button">Blue</label>
+
+                            <input type="radio" name="color" id="Purple2Tier" hidden>
+                            <label for="Purple2Tier" class="option-button">Purple</label>
+
+                            <input type="radio" name="color" id="Natural2Tier" hidden>
+                            <label for="Natural2Tier" class="option-button">Natural (while/cream)</label>
+                        </div>
+                    </div> 
+
+                    <div class="colors">
+                        <p>Top Tier Frosting Color:</p>
+                        <div class="options-container">
+                            <input type="radio" name="color" id="Pink2Tier2" hidden>
+                            <label for="Pink2Tier2" class="option-button">Pink</label>
+
+                            <input type="radio" name="color" id="Red2Tier2" hidden>
+                            <label for="Red2Tier2" class="option-button">Red</label>
+
+                            <input type="radio" name="color" id="Orange2Tier2" hidden>
+                            <label for="Orange2Tier2" class="option-button">Orange</label>
+
+                            <input type="radio" name="color" id="Yellow2Tier2" hidden>
+                            <label for="Yellow2Tie2r" class="option-button">Yellow</label>
+
+                            <input type="radio" name="color" id="Green2Tier2" hidden>
+                            <label for="Green2Tier2" class="option-button">Green</label>
+
+                            <input type="radio" name="color" id="Blue2Tier2" hidden>
+                            <label for="Blue2Tier2" class="option-button">Blue</label>
+
+                            <input type="radio" name="color" id="Purple2Tier2" hidden>
+                            <label for="Purple2Tier2" class="option-button">Purple</label>
+
+                            <input type="radio" name="color" id="Natural2Tier2" hidden>
+                            <label for="Natural2Tier2" class="option-button">Natural (while/cream)</label>
+                        </div>
+                    </div>
+
+                    <div class="piping-colors">
+                        <p>Message Color:</p>
+                        <div class="options-container">
+                            <input type="radio" name="piping-colors" id="PinkPiping2Tier" hidden>
+                            <label for="PinkPiping2Tier" class="option-button">Pink</label>
+
+                            <input type="radio" name="piping-colors" id="RedPiping2Tier" hidden>
+                            <label for="RedPiping2Tier" class="option-button">Red</label>
+
+                            <input type="radio" name="piping-colors" id="OrangePiping2Tier" hidden>
+                            <label for="OrangePiping2Tier" class="option-button">Orange</label>
+
+                            <input type="radio" name="piping-colors" id="YellowPiping2Tier" hidden>
+                            <label for="YellowPiping2Tier" class="option-button">Yellow</label>
+
+                            <input type="radio" name="piping-colors" id="GreenPiping2Tier" hidden>
+                            <label for="GreenPiping2Tier" class="option-button">Green</label>
+
+                            <input type="radio" name="piping-colors" id="BluePiping2Tier" hidden>
+                            <label for="BluePiping2Tier" class="option-button">Blue</label>
+
+                            <input type="radio" name="piping-colors" id="PurplePiping2Tier" hidden>
+                            <label for="PurplePiping2Tier" class="option-button">Purple</label>
+
+                            <input type="radio" name="piping-colors" id="NaturalPiping2Tier" hidden>
+                            <label for="NaturalPiping2Tier" class="option-button">Natural (while/cream)</label>
+                        </div>
+                    </div>
+
+                    <div class="custom-message">
+                        <label for="message"><b>Message on Cake</b> (max of 18 characters)</label> <br>
+                        <textarea id="message" name="message" placeholder="Write your message here..." rows="2" maxlength="18"></textarea>
+                    </div>
+
+                    <label for="popup-custom-2Tier" class="add-button">Add to Order</label>
+                </div>
+            </div>
+
+            <input type="checkbox" id="popup-custom-vintage" hidden>
+            <div class="popup">
+                <div class="custom-vintage-popup-content">
+                    <label for="popup-custom-vintage" class="close">x</label>
+
+                    <h2>Custom Vintage Cake</h2>
+                    <br><p>Design a vintage cake tailored to your event, style, and flavor preferences. <br> Layered cake 
+                    frosted with buttercream frosting and vintage piping.</p><br>
+                    <p><b>Serving Guide: </b> <br> 2 layers of cake, serves 10-15.</p>
+
+                    <p class="price">$50.00</p>
+
+                    <label>
+                       <b>Quantiy:</b>
+                        <input type="number" min="1" value="1">
+                    </label> <br> <br>
+
+                    <div class="flavors">
+                        <p>Cake Flavor:</p>
+                        <div class="options-container">
+                            <input type="radio" name="flavor" id="VanillaVintage" hidden>
+                            <label for="VanillaVintage" class="option-button">Vanilla</label>
+
+                            <input type="radio" name="flavor" id="ChocolateVintage" hidden>
+                            <label for="ChocolateVintage" class="option-button">Chocolate</label>
+
+                            <input type="radio" name="flavor" id="Red VelvetVintage" hidden>
+                            <label for="Red VelvetVintage" class="option-button">Red Velvet</label>
+
+                            <input type="radio" name="flavor" id="CarrotVintage" hidden>
+                            <label for="CarrotVintage" class="option-button">Carrot</label>
+
+                            <input type="radio" name="flavor" id="LemonVintage" hidden>
+                            <label for="LemonVintage" class="option-button">Lemon</label>
+
+                            <input type="radio" name="flavor" id="CoconutVintage" hidden>
+                            <label for="CoconutVintage" class="option-button">Coconut</label>
+                        </div>
+                    </div>
+
+
+                    <div class="colors">
+                        <p>Cake Frosting Color:</p>
+                        <div class="options-container">
+                            <input type="radio" name="color" id="PinkVintage" hidden>
+                            <label for="PinkVintage" class="option-button">Pink</label>
+
+                            <input type="radio" name="color" id="RedVintage" hidden>
+                            <label for="RedVintage" class="option-button">Red</label>
+
+                            <input type="radio" name="color" id="OrangeVintage" hidden>
+                            <label for="OrangeVintage" class="option-button">Orange</label>
+
+                            <input type="radio" name="color" id="YellowVintage" hidden>
+                            <label for="YellowVintage" class="option-button">Yellow</label>
+
+                            <input type="radioVintage" name="color" id="GreenVintage" hidden>
+                            <label for="GreenVintage" class="option-button">Green</label>
+
+                            <input type="radio" name="color" id="BlueVintage" hidden>
+                            <label for="BlueVintage" class="option-button">Blue</label>
+
+                            <input type="radio" name="color" id="PurpleVintage" hidden>
+                            <label for="PurpleVintage" class="option-button">Purple</label>
+
+                            <input type="radio" name="color" id="NaturalVintage" hidden>
+                            <label for="NaturalVintage" class="option-button">Natural (while/cream)</label>
+                        </div>
+                    </div>
+
+                    <div class="piping-colors">
+                        <p>Piping Color:</p>
+                        <div class="options-container">
+                            <input type="radio" name="piping-colors" id="PinkPipingVintage" hidden>
+                            <label for="PinkPipingVintage" class="option-button">Pink</label>
+
+                            <input type="radio" name="piping-colors" id="RedPipingVintage" hidden>
+                            <label for="RedPipingVintage" class="option-button">Red</label>
+
+                            <input type="radio" name="piping-colors" id="OrangePipingVintage" hidden>
+                            <label for="OrangePipingVintage" class="option-button">Orange</label>
+
+                            <input type="radio" name="piping-colors" id="YellowPipingVintage" hidden>
+                            <label for="YellowPipingVintage" class="option-button">Yellow</label>
+
+                            <input type="radio" name="piping-colors" id="GreenPipingVintage" hidden>
+                            <label for="GreenPipingVintage" class="option-button">Green</label>
+
+                            <input type="radio" name="piping-colors" id="BluePipingVintage" hidden>
+                            <label for="BluePipingVintage" class="option-button">Blue</label>
+
+                            <input type="radio" name="piping-colors" id="PurplePipingVintage" hidden>
+                            <label for="PurplePipingVintage" class="option-button">Purple</label>
+
+                            <input type="radio" name="piping-colors" id="NaturalPipingVintage" hidden>
+                            <label for="NaturalPipingVintage" class="option-button">Natural (while/cream)</label>
+                        </div>
+                    </div>
+
+                    <div class="piping-colors">
+                        <p>Message Color:</p>
+                        <div class="options-container">
+                            <input type="radio" name="piping-colors" id="PinkPipingVintage2" hidden>
+                            <label for="PinkPipingVintage2" class="option-button">Pink</label>
+
+                            <input type="radio" name="piping-colors" id="RedPipingVintage2" hidden>
+                            <label for="RedPipingVintage2" class="option-button">Red</label>
+
+                            <input type="radio" name="piping-colors" id="OrangePipingVintage2" hidden>
+                            <label for="OrangePipingVintage2" class="option-button">Orange</label>
+
+                            <input type="radio" name="piping-colors" id="YellowPipingVintage2" hidden>
+                            <label for="YellowPipingVintage2" class="option-button">Yellow</label>
+
+                            <input type="radio" name="piping-colors" id="GreenPipingVintage2" hidden>
+                            <label for="GreenPipingVintage2" class="option-button">Green</label>
+
+                            <input type="radio" name="piping-colors" id="BluePipingVintage2" hidden>
+                            <label for="BluePipingVintage2" class="option-button">Blue</label>
+
+                            <input type="radio" name="piping-colors" id="PurplePipingVintage2" hidden>
+                            <label for="PurplePipingVintage2" class="option-button">Purple</label>
+
+                            <input type="radio" name="piping-colors" id="NaturalPipingVintage2" hidden>
+                            <label for="NaturalPipingVintage2" class="option-button">Natural (while/cream)</label>
+                        </div>
+                    </div>
+
+                    <div class="custom-message">
+                        <label for="message"><b>Message on Cake</b> (max of 18 characters)</label> <br>
+                        <textarea id="message" name="message" placeholder="Write your message here..." rows="2" maxlength="18"></textarea>
+                    </div>
+
+                    <label for="popup-custom-vintage" class="add-button">Add to Order</label>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <footer class="footer">
+        <p>Butter & Bloom Bakery</p>
+    </footer>
+</html>
