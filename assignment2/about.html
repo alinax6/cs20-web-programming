@@ -61,10 +61,13 @@
             .about {
                 max-width: 1000px;
                 margin: 60px auto;
+                width: 90%;
+                padding: 0 10px;
             }
 
             .about h1{
                 text-align: center;
+                font-size: 2rem;
             }
 
             .about p {
@@ -83,7 +86,7 @@
             }
 
             .about-highlight h3{
-                font-size: x-large;
+                font-size: 1.5rem;
                 margin-bottom: 30px;
             }
 
@@ -96,6 +99,28 @@
             .footer {
                 background-color: #fffac7;
                 padding: 20px;
+            }
+
+            @media (max-width: 768px) {
+                .site-header {
+                    text-align: center;
+                }
+
+                .nav-bar {
+                    margin: 5px 10px;
+                }
+
+                .nav-bar a {
+                    margin-top: 30px;
+                    padding: 5px;
+                    color: #333;
+                    text-decoration: none;
+                    margin-right: 20px;
+                }
+
+                .footer {
+                    text-align: center;
+                }
             }
         </style>
     </head>
