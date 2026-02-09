@@ -475,7 +475,7 @@ textarea {
         padding: 5px;
         color: #333;
         text-decoration: none;
-        margin-right: 20px;
+        text-align: center;
     }
 
     .hero {
@@ -511,6 +511,16 @@ textarea {
     .cake-item img {
         width: 100%;
     }
+
+    .order-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .order-box img {
+        width: 100%;
+    }
+    
 
     .footer {
         text-align: center;
