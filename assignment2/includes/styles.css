@@ -264,6 +264,10 @@ h3, p, a, label, textarea, button, input{
     display: inline-block;
 }
 
+.order-button:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
 .add-button {
     display: inline-block;
     margin-top: 20px;
@@ -273,6 +277,10 @@ h3, p, a, label, textarea, button, input{
     cursor: pointer;
     font-weight: bold;
     text-align: center;
+}
+
+.add-button:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .seasonal-popup-content {
