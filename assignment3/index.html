@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Joe's Hotdog Stand</title>
+    </head>
+
+    <body>
+        <p id="hotdogs"></p>
+        <p id="fries"></p>
+        <p id="drinks"></p>
+        <p id="subtotal"></p>
+        <p id="discounts"></p>
+        <p id="discountedSubtotal"></p>
+        <p id="tax"></p>
+        <p id="totalFinal"></p>
+    </body>
+
+    <script>
+        alert ("Hotdogs -$5.25\n" + "French Fries -$3.75\n" + "Drinks -$2.50\n" + 
+        "Joe's meal deal (1 hot dog, 1 french fries, 1 drink) -$10 \n" + 
+        "10% discount on any order totaling $30 (before tax)")
+
+        const hotdogPrice = 5.25;
+        const friesPrice = 3.75
+        const drinkPrice = 2.5;
+        const mealDealPrice = 10;
+        const discount = 0.1;
+        const taxRate = 0.0625;
+
+        let numDogs = Number(prompt("How many hotdogs would you to order?"));
+        let numFries = Number(prompt("How many fries do you want to order?"));
+        let numSoda = Number(prompt("How many sodas do you want to order?"));
+
+        function showMoney(number) {
+            let roundNumber = Math.round(number * 100) / 100;
+            let numberStr = roundNumber.toString();
+
+            if (!numberStr.includes(".")) {
+                numberStr = numberStr + ".00";
+            }
+            else if (numberStr[numberStr.length - 2] == ".") {
+                numberStr = numberStr + "0";
+            }
+
+            return numberStr;
+        }
+
+        console.log(showMoney(2.5));
+        console.log(showMoney(2.58888));
+        console.log(showMoney(2.582));
+        console.log(showMoney(10));
+
+        
+        let numMealDeals = Math.min(numDogs, numFries, numSoda);
+        let remainingDogs = numDogs - numMealDeals;
+        let remainingFries = numFries - numMealDeals;
+        let remainingSoda = numSoda - numMealDeals;
+
+        let hotdogTotal = numDogs * hotdogPrice;
+        let friesTotal = numFries * friesPrice;
+        let sodaTotal = numSoda * drinkPrice;
+
+        let subtotal = numMealDeals * mealDealPrice + remainingDogs * hotdogPrice + remainingFries * friesPrice +
+                    remainingSoda * drinkPrice;
+        console.log(showMoney(subtotal));
+
+        let discountTotal = subtotal;
+        let discountAmount = 0;
+        if (subtotal >= 30) {
+            discountAmount = discountTotal * discount;
+            discountTotal -= discountAmount;
+        }
+
+        let total = discountTotal;
+
+        let taxAmount = total * taxRate;
+
+        let finalTotal = total + taxAmount;
+
+        document.getElementById("hotdogs").innerHTML = "Number of hotdogs ordered: " + numDogs + 
+        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Hotdog total cost: " + hotdogTotal; 
+        document.getElementById("fries").innerHTML = "Number of fries ordered: " + numFries + 
+        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Fries total cost: " + friesTotal; 
+        document.getElementById("drinks").innerHTML = "Number of drinks ordered: " + numSoda + 
+        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Drink total cost: " + sodaTotal; 
+        document.getElementById("subtotal").innerHTML = "Subtotal before discount: " + showMoney(subtotal);
+        document.getElementById("discounts").innerHTML = " Discount: " +showMoney(discountAmount);
+        document.getElementById("discountedSubtotal").innerHTML = " Subtotal after discount: " + showMoney(total);
+        document.getElementById("tax").innerHTML = " Tax Amount: " + showMoney(taxAmount);
+        document.getElementById("totalFinal").innerHTML = " Final Total: " + showMoney(finalTotal);
+
+
+
+    </script>
+</html>
