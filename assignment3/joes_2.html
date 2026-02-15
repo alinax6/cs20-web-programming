@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Joe's Hotdog Stand</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <p id="hotdogs"></p>
+        <p id="fries"></p>
+        <p id="drinks"></p>
+        <p id="subtotal"></p>
+        <p id="discounts"></p>
+        <p id="discountedSubtotal"></p>
+        <p id="tax"></p>
+        <p id="totalFinal"></p>
+    </body>
+
+    <script>
+        alert ("Hotdogs: $5.25\n" + "French Fries: $3.75\n" + "Drinks: $2.50\n" + 
+            "Joe's meal deal (1 hot dog, 1 french fries, 1 drink): $10 \n" + 
+            "10% discount on any order totaling $30 (before tax)")
+    
+        const items = {
+            hotdogs: 5.25,
+            fries: 3.75,
+            drinks: 2.50,
+        };
+    
+        const quantities = {
+            hotdogs: 0,
+            fries: 0,
+            drinks: 0
+        };
+    
+        const mealDealPrice = 10;
+        const discount = 0.1;
+        const taxRate = 0.0625;
+    
+        for (let item in items) {
+            let amount = Number(prompt("How many " + item + " would you like to order?"));
+            quantities[item] = amount;
+        }
+    
+        function showMoney(number) {
+            let roundNumber = Math.round(number * 100) / 100;
+            let numberStr = roundNumber.toString();
+    
+            if (!numberStr.includes(".")) {
+                numberStr = numberStr + ".00";
+            }
+            else if (numberStr[numberStr.length - 2] == ".") {
+                numberStr = numberStr + "0";
+            }
+    
+            return numberStr;
+        }
+    
+        let numMealDeals = Math.min(quantities["hotdogs"], quantities["fries"], quantities["drinks"]);
+        let remainingDogs = quantities["hotdogs"] - numMealDeals;
+        let remainingFries = quantities["fries"] - numMealDeals;
+        let remainingSoda = quantities["drinks"] - numMealDeals;
+    
+        let hotdogTotal = quantities["hotdogs"] * items["hotdogs"];
+        let friesTotal = quantities["fries"] * items["fries"];
+        let sodaTotal = quantities["drinks"] * items["drinks"];
+    
+        let subtotal = numMealDeals * mealDealPrice + remainingDogs * items["hotdogs"] + 
+                       remainingFries * items["fries"] + remainingSoda * items["drinks"];
+        console.log(showMoney(subtotal));
+    
+        let discountTotal = subtotal;
+        let discountAmount = 0;
+        if (subtotal >= 30) {
+            discountAmount = discountTotal * discount;
+            discountTotal -= discountAmount;
+        }
+    
+        let total = discountTotal;
+    
+        let taxAmount = total * taxRate;
+    
+        let finalTotal = total + taxAmount;
+    
+        document.getElementById("hotdogs").innerHTML = "Number of hotdogs ordered: " + quantities["hotdogs"] + 
+        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Hotdog total cost: " + showMoney(hotdogTotal); 
+        document.getElementById("fries").innerHTML = "Number of fries ordered: " + quantities["fries"] + 
+        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Fries total cost: " + showMoney(friesTotal); 
+        document.getElementById("drinks").innerHTML = "Number of drinks ordered: " + quantities["drinks"] + 
+        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Drink total cost: " + showMoney(sodaTotal); 
+        document.getElementById("subtotal").innerHTML = "Subtotal before discount: " + showMoney(subtotal);
+        document.getElementById("discounts").innerHTML = " Discount: " +showMoney(discountAmount);
+        document.getElementById("discountedSubtotal").innerHTML = " Subtotal after discount: " + showMoney(total);
+        document.getElementById("tax").innerHTML = " Tax Amount: " + showMoney(taxAmount);
+        document.getElementById("totalFinal").innerHTML = " Final Total: " + showMoney(finalTotal);
+    
+    </script>
+
+</html>

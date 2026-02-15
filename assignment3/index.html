@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Joe's Hotdog Stand</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
@@ -77,11 +78,11 @@
         let finalTotal = total + taxAmount;
 
         document.getElementById("hotdogs").innerHTML = "Number of hotdogs ordered: " + numDogs + 
-        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Hotdog total cost: " + hotdogTotal; 
+        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Hotdog total cost: " + showMoney(hotdogTotal); 
         document.getElementById("fries").innerHTML = "Number of fries ordered: " + numFries + 
-        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Fries total cost: " + friesTotal; 
+        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Fries total cost: " + showMoney(friesTotal); 
         document.getElementById("drinks").innerHTML = "Number of drinks ordered: " + numSoda + 
-        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Drink total cost: " + sodaTotal; 
+        " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp Drink total cost: " + showMoney(sodaTotal); 
         document.getElementById("subtotal").innerHTML = "Subtotal before discount: " + showMoney(subtotal);
         document.getElementById("discounts").innerHTML = " Discount: " +showMoney(discountAmount);
         document.getElementById("discountedSubtotal").innerHTML = " Subtotal after discount: " + showMoney(total);

@@ -1,0 +1,23 @@
+* {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#subtotal {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#discountedSubtotal {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#totalFinal {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#discounts {
+    color: #068a18;
+}
