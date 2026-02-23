@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>tic tac toe </title>
+
+        <style>
+            * {
+                justify-content: center;
+                text-align: center;
+            }
+            .board {
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+                grid-template-rows: repeat(3, 100px);
+                gap: 5px;
+            }
+
+            .square {
+                width: 100px;
+                height: 100px;
+                background: #ffffff;
+                border: 1px solid black;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 60px;
+            }
+
+            .square:hover {
+                background: #dedede;
+            }
+
+            .turn {
+                display: inline-block;
+                border: 2px solid black;
+                padding: 15px 30px;
+                margin-bottom: 30px;
+                font-size: 24px;
+            }
+
+            .winner {
+                display: inline-block;
+                border: 2px solid black;
+                padding: 15px 30px;
+                margin-top: 30px;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Tic Tac Toe</h1>
+        <div class="turn">X's turn</div>
+        <div class="board">
+            <script>
+                const NUM_SQUARES = 9;
+                for (i=0; i<NUM_SQUARES; i++)
+                {
+                    id = "sq"+i;
+
+                    if (i == 2){
+                        document.write( "<div class='square' id='" + id +"'>X</div>" );
+                    }
+                    else if (i == 3){
+                        document.write( "<div class='square' id='" + id +"'>O</div>" );
+                    }
+                    else {
+                        document.write( "<div class='square' id='" + id +"'></div>" );
+                    }
+                }
+
+            </script>
+        </div>
+        <div class="winner">Winner</div>
+    </body>
+</html>
