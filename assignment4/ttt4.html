@@ -39,13 +39,13 @@
                 font-size: 24px;
             }
 
-            .winner {
+            /* .winner {
                 display: inline-block;
                 border: 2px solid black;
                 padding: 15px 30px;
                 margin-top: 30px;
                 font-size: 24px;
-            }
+            } */
 
         </style>
     </head>
@@ -69,7 +69,7 @@
         <div class="winner"></div> 
         <script>
             const squares = document.querySelectorAll(".square")
-                const winnerDiv = document.querySelector(".winner");
+                // const winnerDiv = document.querySelector(".winner");
                 for (let i = 0; i < squares.length; i++) {
                     squares[i].addEventListener("click", clickSquare);
                 }
@@ -138,12 +138,12 @@
                     console.log("winConditions: " + winConditions);
 
                     if (winner != "") {
-                        winnerDiv.textContent = winner + " wins! Game Over!"; 
+                        turns.textContent = winner + " wins! Game Over!"; 
                         endGame = true;
                         return;
                     }
                     else if (stalemate) {
-                        winnerDiv.textContent = "Stalemate! Game Over!";
+                        turns.textContent = "Stalemate! Game Over!";
                         endGame = true;
                         return;
                     }
@@ -155,7 +155,7 @@
 
                 function startGame() {
                     endGame = false;
-                    winnerDiv.textContent = "";
+                    // winnerDiv.textContent = "";
                     for (let i = 0; i < squares.length; i++) {
                         squares[i].textContent = "";
                     } 
