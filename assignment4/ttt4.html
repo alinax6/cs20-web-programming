@@ -39,14 +39,6 @@
                 font-size: 24px;
             }
 
-            /* .winner {
-                display: inline-block;
-                border: 2px solid black;
-                padding: 15px 30px;
-                margin-top: 30px;
-                font-size: 24px;
-            } */
-
         </style>
     </head>
 
@@ -69,7 +61,6 @@
         <div class="winner"></div> 
         <script>
             const squares = document.querySelectorAll(".square")
-                // const winnerDiv = document.querySelector(".winner");
                 for (let i = 0; i < squares.length; i++) {
                     squares[i].addEventListener("click", clickSquare);
                 }
@@ -155,7 +146,6 @@
 
                 function startGame() {
                     endGame = false;
-                    // winnerDiv.textContent = "";
                     for (let i = 0; i < squares.length; i++) {
                         squares[i].textContent = "";
                     } 

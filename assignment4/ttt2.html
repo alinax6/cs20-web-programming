@@ -58,16 +58,11 @@
                 {
                     id = "sq"+i;
 
-                    if (i == 2){
-                        document.write( "<div class='square' id='" + id +"'>X</div>" );
-                    }
-                    else if (i == 3){
-                        document.write( "<div class='square' id='" + id +"'>O</div>" );
-                    }
-                    else {
-                        document.write( "<div class='square' id='" + id +"'></div>" );
-                    }
+                    document.write( "<div class='square' id='" + id +"'></div>" );
                 }
+
+                document.getElementById("sq2").innerHTML = "X";
+                document.getElementById("sq3").innerHTML = "O";
 
             </script>
         </div>
