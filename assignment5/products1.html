@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>products</title>
+    </head>
+
+    <body>
+        <script>
+            products = {
+                "productlist": [
+                    {
+                        "Name": "Vintage T-shirt",
+                        "Description": "Tie-die Grateful Dead T-shirt",
+                        "Price": 35,
+                        "Categories": ["clothing", "vintage"]
+                    },
+                    {
+                        "Name": "Water bottle",
+                        "Description": "Blue reusable insulated water bottle",
+                        "Price": 25,
+                        "Categories": ["drink", "home"]
+                    },
+                    {
+                        "Name": "Running shoes",
+                        "Description": "Lightweight running shoes",
+                        "Price": 85,
+                        "Categories": ["sports", "clothing"]
+                    },
+                    {
+                        "Name": "Backpack",
+                        "Description": "Black travel backpack",
+                        "Price": 35,
+                        "Categories": ["travel", "acessories"]
+                    },
+                    {
+                        "Name": "Desk lamp",
+                        "Description": "Small LED desk lamp",
+                        "Price": 25,
+                        "Categories": ["home", "office"]
+                    },
+                    {
+                        "Name": "Blender",
+                        "Description": "Electric kitchen appliance for blending ingredients together",
+                        "Price": 35,
+                        "Categories": ["kitchen", "appliance"]
+                    },
+                    {
+                        "Name": "Sunglasses",
+                        "Description": "UV protection sunglasses",
+                        "Price": 30,
+                        "Categories": ["accessories", "fashion"]
+                    },
+                    {
+                        "Name": "Ceramic plate",
+                        "Description": "Handmade pottery plate",
+                        "Price": 25,
+                        "Categories": ["home", "kitchen", "handmade"]
+                    },
+                    {
+                        "Name": "Beach Towel",
+                        "Description": "Soft beach towel with striped design",
+                        "Price": 15,
+                        "Categories": ["home", "outdoor"]
+                    },
+                    {
+                        "Name": "Notebook",
+                        "Description": "Red wide ruled composition notebook",
+                        "Price": 2,
+                        "Categories": ["office", "school"]
+                    }
+                ]
+            };
+
+            productString = JSON.stringify(products);
+            document.write(productString);
+
+            // for (let i = 0; i < products.productlist.length; i++) {
+            //     let p = products.productlist[i];
+
+            //     document.write (
+            //         p.Name + " | " +
+            //         p.Description + " | $" +
+            //         p.Price + " | " +
+            //         p.Categories.join(", ") +
+            //         "<br>"
+            //     );
+            // }
+        
+        </script>
+    </body>
+</html>
