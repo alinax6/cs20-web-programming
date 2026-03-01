@@ -8,40 +8,42 @@
         <div id="result"></div>
 
         <div class="api-info">
-            <p>I used the IPstack API to get location information based on an 
+            <p>I used the ipapi API to get location information based on an 
                 IP address. It returns JSON data including country, region, city,
                 latitude, longitude, and timezone. I selected it because it is 
-                simple to access with GET requests and provides user-friendly data.
+                simple to access with GET requests and provides a lot data based on the ip address.
             </p>
 
-            <p><b>Website:</b> <a href="https://ipstack.com" target="_blank">https://ipstack.com</a></p>
-            <p><b>API parameters used:</b>IP address or check to detect current IP and acess key.</p>
-            <p><b>Use case:</b> This API can be used for personalizing content for users based
-            on their location or for building geolocation-based applications.</p>
+            <p><b>Website:</b> <a href="https://ipapi.co/" target="_blank">https://ipapi.co/</a></p>
+            <p><b>API parameters used: </b>I used the IP address (8.8.8.8) in the query string. The API
+            requires an IP address in order to return the geographic information based on the address.</p>
+            <p><b>Use case: </b> This API can be used for websites that want to personalize content based on a 
+                user's location, like showing currency, language preferences, or targeted advertising.</p>
         </div>
 
         <script>
             $(document).ready(function() {
-                const accessKey = "c74553aa3ddffb1b0c8b26df730532ae";
-                const url = `https://api.ipstack.com/check?access_key=${accessKey}`;
+            const ipAddress = "8.8.8.8"; 
+            const url = `https://ipapi.co/${ipAddress}/json/`;
 
-                $.get(url, function(data) {
-                    console.log(data);
+            $.get(url, function(data) {
+                console.log(data); 
 
-                    let output = `
-                        <h2>${data.ip}</h2>
-                        <p><b>Country: </b> ${data.country_name}</p>
-                        <p><b>Region: </b> ${data.region_name}</p>
-                        <p><b>City: </b> ${data.city}</p>
-                        <p><b>Latitude: </b> ${data.latitude}</p>
-                        <p><b>Longitude: </b> ${data.longitude}</p>
-                        <p><b>Timezone: </b> ${data.time_zone.id}</p>
-                    `;
-                    $("#result").html(output);
-                }).fail(function() {
-                    $("#result").html("Failed to retrieve data. Make sure your API key is valid.");
-                });
+                const output = `
+                    <h2>IP Address: ${data.ip}</h2>
+                    <p><b>Country:</b> ${data.country_name}</p>
+                    <p><b>Region:</b> ${data.region}</p>
+                    <p><b>City:</b> ${data.city}</p>
+                    <p><b>Latitude:</b> ${data.latitude}</p>
+                    <p><b>Longitude:</b> ${data.longitude}</p>
+                    <p><b>Timezone:</b> ${data.timezone}</p>
+                `;
+
+                $("#result").html(output);
+            }).fail(function() {
+                $("#result").html("Failed to retrieve location data.");
             });
+        });
 
 
         </script>
