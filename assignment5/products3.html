@@ -39,21 +39,28 @@
         <div id="result"></div>
 
         <script>
+            // store the products globablly
             let allProducts = [];
 
             $(document).ready(function() {
+                // load product data from JSON file
                 $.get("products.json", function(data) {
                     allProducts = data.productlist;
+
+                    // use a SET to sore each category
                     let categoriesSet = new Set ();
 
+                    // loop through all of the products
                     for (let i = 0; i < allProducts.length; i++) {
                         let productCategories = allProducts[i].Categories;
 
+                        // add each category to the Set
                         for (let j = 0; j < productCategories.length; j++) {
                             categoriesSet.add(productCategories[j]);
                         }
                     }
 
+                    // add the category options to dropdown
                     let select = document.getElementById("categorySelect");
 
                     categoriesSet.forEach(function(category) {
@@ -69,6 +76,7 @@
                 let selectedCategory = $("#categorySelect").val();
                 let output = "";
 
+                // loop through products and check if they are in the selected category
                 for (let i = 0; i < allProducts.length; i++) {
                     if (allProducts[i].Categories.includes(selectedCategory)) {
                         output += `<div class="product-name">${allProducts[i].Name}</div>`;
