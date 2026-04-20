@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <title>Animal Flashcards</title>
+
+        <style>
+            button {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="animalFlashcards"></div>
+        <script type="text/babel">
+            // component that creates the animal flashcard buttons
+            function AnimalButtons() {
+                const ANIMALS = [
+                    {name: "Dog", sound: "woof"},
+                    {name: "Cat", sound: "meow"},
+                    {name: "Duck", sound: "quack"},
+                    {name: "Cow", sound: "moo"}
+                ]
+
+                // function triggered when a button is clicked
+                function click(animal) {
+                    alert(`The ${animal.name.toLowerCase()} says ${animal.sound}`)
+                }
+
+                // JSX rendering the title and buttons
+                return(<div> <h1>Animal Flashcards</h1> 
+                    {ANIMALS.map((animal, index) => (
+                        <button key={index} onClick={()=> click(animal)}>
+                            {animal.name}
+                        </button>
+                    ))}
+                </div>
+                )
+            }
+
+            ReactDOM.render(<AnimalButtons />, document.getElementById("animalFlashcards"))
+        </script>
+    </body>
+</html>
